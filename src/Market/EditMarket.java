@@ -1,8 +1,8 @@
-package Utils;
+package Market;
 
 import java.util.Scanner;
 
-public class AddMarket {
+public class EditMarket {
     public void start(Scanner scanner) {
 
     }
