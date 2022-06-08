@@ -31,15 +31,16 @@ public class MenuBuilder {
      * @param title        Показывает тайтл, используйте <B>null</B> что бы скрыть
      * @param markets      список магазинов
      * @param withProducts выводить ли список магазинов с продуктами
+     * @param startNumber  Число с которого начинается список
      * @author Nikita
      */
 
-    public static void MenuBuilderGetMarkets(String title, List<Market> markets, boolean withProducts) {
-        AtomicInteger counter = new AtomicInteger(1);
+    public static void MenuBuilderGetMarkets(String title, List<Market> markets, boolean withProducts, int startNumber) {
+        AtomicInteger counter = new AtomicInteger(startNumber);
         if (title != null) System.out.println(title);
         for (Market market : markets) {
             System.out.printf(counter.getAndIncrement() + " - " + market.name() + "(address %s)", market.address());
-            if (withProducts) MenuBuilderGetProducts("List products: " ,market.products());
+            if (withProducts) MenuBuilderGetProducts("List products: ", market.products());
         }
     }
 

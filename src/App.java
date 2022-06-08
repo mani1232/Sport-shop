@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 public class App {
     public void run(Scanner scanner, List<Market> database) {
-        List<String> options = List.of("Add market", "Edit Market", "Get All markets", "Visit as a buyer");
-        MenuBuilder.MenuBuilderNumeric(Constants.TITLE + " | Main menu", options, "Close app");
+        MenuBuilder.MenuBuilderNumeric(Constants.TITLE + " | Main menu", List.of("Add market", "Edit Market", "Get All markets", "Visit as a buyer"), "Close app");
         switch (scanner.nextInt()) {
             case 0 -> System.exit(0);
             case 1 -> AddMarket.start(scanner, database);
