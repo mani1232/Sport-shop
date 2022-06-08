@@ -44,12 +44,16 @@ public class ManageProduct {
     }
 
     public static void removeProduct(Scanner scanner, List<Product> products) {
-        System.out.println("Enter id of product");
-        int choice = scanner.nextInt();
-        if (choice <= products.size()) {
-            products.remove(choice);
-        } else {
-            System.out.println("This id not found");
+        while (true) {
+            System.out.println("Enter id of product or -1 for return");
+            int choice = scanner.nextInt();
+            if (choice < products.size() && choice >= 0) {
+                products.remove(choice);
+            } else if (choice == -1) {
+                return;
+            } else {
+                System.out.println("This id not found");
+            }
         }
     }
 }
