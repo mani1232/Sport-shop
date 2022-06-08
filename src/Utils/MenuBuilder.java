@@ -16,7 +16,7 @@ public class MenuBuilder {
      * @param nullOption нулевая опция завершения програмы, используйте <B>null</B> что бы скрыть
      * @author Nikita
      */
-    public void MenuBuilderNumeric(String title, List<String> strings, String nullOption) {
+    public static void MenuBuilderNumeric(String title, List<String> strings, String nullOption) {
         AtomicInteger counter = new AtomicInteger(1);
         if (title != null) System.out.println(title);
         if (nullOption != null) System.out.println("0 - " + nullOption);
@@ -34,7 +34,7 @@ public class MenuBuilder {
      * @author Nikita
      */
 
-    public void MenuBuilderGetMarkets(String title, List<Market> markets, boolean withProducts) {
+    public static void MenuBuilderGetMarkets(String title, List<Market> markets, boolean withProducts) {
         AtomicInteger counter = new AtomicInteger(1);
         if (title != null) System.out.println(title);
         for (Market market : markets) {
@@ -50,7 +50,7 @@ public class MenuBuilder {
      * @author Nikita
      */
 
-    public void MenuBuilderGetProducts(String title, List<Product> strings) {
+    public static void MenuBuilderGetProducts(String title, List<Product> strings) {
         if (title != null) System.out.println(title);
         for (int i = 0; i < strings.size(); i++) {
             System.out.println(i + " - id"
