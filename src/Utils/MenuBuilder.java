@@ -47,8 +47,9 @@ public class MenuBuilder {
     /**
      * Выводит список продуктов
      *
-     * @param strings список продуктов
-     * @param startNumber  Число с которого начинается список
+     * @param title       Показывает тайтл, используйте <B>null</B> что бы скрыть
+     * @param strings     список продуктов
+     * @param startNumber Число с которого начинается список
      * @author Nikita
      */
 
