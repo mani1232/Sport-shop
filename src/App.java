@@ -13,8 +13,8 @@ public class App {
             case 0 -> System.exit(0);
             case 1 -> AddMarket.start(scanner, database);
             case 2 -> EditMarket.start(scanner, database);
-            case 3 -> MenuBuilder.MenuBuilderGetMarkets("Showing all markets and products", database, true);
-            case 4 -> MenuBuilder.MenuBuilderGetMarkets("Showing all markets", database, false);
+            case 3 -> MenuBuilder.MenuBuilderGetMarkets("Showing all markets and products", database, true, 1);
+            case 4 -> MenuBuilder.MenuBuilderGetMarkets("Showing all markets", database, false, 1);
         }
     }
 }

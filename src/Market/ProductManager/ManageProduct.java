@@ -17,7 +17,7 @@ public class ManageProduct {
                 }
                 case 1 -> products.add(ManageProduct.createProduct(scanner));
                 case 2 -> ManageProduct.removeProduct(scanner, products);
-                case 3 -> MenuBuilder.MenuBuilderGetProducts("List products: ", products);
+                case 3 -> MenuBuilder.MenuBuilderGetProducts("List products: ", products, 0);
             }
         }
     }

@@ -40,7 +40,7 @@ public class MenuBuilder {
         if (title != null) System.out.println(title);
         for (Market market : markets) {
             System.out.printf(counter.getAndIncrement() + " - " + market.name() + "(address %s)", market.address());
-            if (withProducts) MenuBuilderGetProducts("List products: ", market.products());
+            if (withProducts) MenuBuilderGetProducts("List products: ", market.products(), startNumber);
         }
     }
 
@@ -48,16 +48,18 @@ public class MenuBuilder {
      * Выводит список продуктов
      *
      * @param strings список продуктов
+     * @param startNumber  Число с которого начинается список
      * @author Nikita
      */
 
-    public static void MenuBuilderGetProducts(String title, List<Product> strings) {
+    public static void MenuBuilderGetProducts(String title, List<Product> strings, int startNumber) {
+        AtomicInteger counter = new AtomicInteger(startNumber);
         if (title != null) System.out.println(title);
-        for (int i = 0; i < strings.size(); i++) {
-            System.out.println(i + " - id"
-                    + "\nName: " + strings.get(i).name()
-                    + "\nColor: " + strings.get(i).color()
-                    + "\nCost: " + strings.get(i).cost()
+        for (Product product : strings) {
+            System.out.println(counter.getAndIncrement() + " - id"
+                    + "\nName: " + product.name()
+                    + "\nColor: " + product.color()
+                    + "\nCost: " + product.cost()
             );
         }
     }
