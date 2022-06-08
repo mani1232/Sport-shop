@@ -15,6 +15,7 @@ public class Main {
                 new App().run(scanner, DataBaseList);
             } catch (Exception e) {
                 e.printStackTrace();
+                System.exit(1);
             }
         }
     }
