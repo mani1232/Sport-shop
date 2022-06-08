@@ -34,6 +34,8 @@ public class BuyerManager {
         int choiceProduct = scanner.nextInt();
         Product product = database.get(choiceMarket).products().get(choiceProduct);
         if (product.cost() <= buyer.getWallet()) {
+            buyer.setWallet(buyer.getWallet() - product.cost());
+            buyer.getHistory().add(product);
             System.out.println("You buy " + product.name() + ", for " + product.cost());
         } else {
             System.out.println("You don't have enough money");
