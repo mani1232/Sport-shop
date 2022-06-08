@@ -12,7 +12,7 @@ public class MenuBuilder {
      * Выводит нумерованное меню
      *
      * @param title      Показывает тайтл, используйте <B>null</B> что бы скрыть
-     * @param strings    выбор опций
+     * @param strings    список опций
      * @param nullOption нулевая опция завершения програмы, используйте <B>null</B> что бы скрыть
      * @author Nikita
      */
