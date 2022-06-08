@@ -39,7 +39,7 @@ public class MenuBuilder {
         if (title != null) System.out.println(title);
         for (Market market : markets) {
             System.out.printf(counter.getAndIncrement() + " - " + market.name() + "(address %s)", market.address());
-            if (withProducts) MenuBuilderGetProducts(market.products());
+            if (withProducts) MenuBuilderGetProducts("List products: " ,market.products());
         }
     }
 
@@ -50,12 +50,13 @@ public class MenuBuilder {
      * @author Nikita
      */
 
-    public void MenuBuilderGetProducts(List<Product> strings) {
-        for (Product s : strings) {
-            System.out.println(s.id() + " - "
-                    + "Name: " + s.name()
-                    + "\n Color: " + s.color()
-                    + "\n Cost: " + s.cost()
+    public void MenuBuilderGetProducts(String title, List<Product> strings) {
+        if (title != null) System.out.println(title);
+        for (int i = 0; i < strings.size(); i++) {
+            System.out.println(i + " - id"
+                    + "\nName: " + strings.get(i).name()
+                    + "\nColor: " + strings.get(i).color()
+                    + "\nCost: " + strings.get(i).cost()
             );
         }
     }

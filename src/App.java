@@ -15,8 +15,8 @@ public class App {
         menuBuilder.MenuBuilderNumeric(Constants.TITLE + " | Main menu", options, "Close app");
         switch (scanner.nextInt()) {
             case 0 -> System.exit(0);
-            case 1 -> new AddMarket().start(scanner);
-            case 2 -> new EditMarket().start(scanner);
+            case 1 -> new AddMarket().start(scanner, database);
+            case 2 -> new EditMarket().start(scanner, database);
             case 3 -> menuBuilder.MenuBuilderGetMarkets("Showing all markets and products", database, true);
             case 4 -> menuBuilder.MenuBuilderGetMarkets("Showing all markets", database, false);
         }
